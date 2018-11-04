@@ -1,0 +1,30 @@
+body {
+	background: url('/images/earth_data_connectivity.png') no-repeat center center fixed;
+}
+
+#gvt-heading {
+	width: 100%;
+	margin: 10% auto;
+	border: 20px double white;
+}
+
+h1 {
+	font-size: 6em;
+	color: white;
+	text-align: center;
+}
+
+#login-form {
+	width: 30%;
+}
+
+#register-link {
+	text-align: center;
+	margin: 30px;
+}
+
+#register-link a {
+	color: white;
+	font-size: 1.5em;
+	text-decoration: underline;
+}

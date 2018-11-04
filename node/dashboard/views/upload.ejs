@@ -1,0 +1,56 @@
+<% include ./partials/header %> 
+<link rel="stylesheet" type="text/css" href="/stylesheets/upload.css">
+
+<div class="container bg-dark upload-data-form">
+	<form method="POST" action="/upload" enctype="multipart/form-data">
+		<div class="form-row">
+			<div class="form-check form-check-inline col">
+  				<input class="form-check-input" type="radio" name="upload-type" id="routine-upload" value="routine-upload" checked>
+  				<label class="form-check-label" for="routine-upload">Routine Upload</label>
+			</div>
+			<div class="form-check form-check-inline col">
+  				<input class="form-check-input" type="radio" name="upload-type" id="update-lts" value="update-lts">
+  				<label class="form-check-label" for="update-lts">Update Lookup Table</label>
+			</div>
+		</div>
+		<hr>
+		<div class="form-row">
+    		<div class="col">
+    			<label for="user-file">Choose a file</label>
+    			<input type="file" class="form-control-file" id="user-file" name="user-file" required>
+          <small id="user-file" class="form-text text-muted">.xlsx uploads are restricted to 1 sheet per file.</small>
+    		</div>
+    		<div class="col">
+    			<label for="datatype">Specify type of data</label>
+      			<select class="form-control" id="datatype" name="datatype" required>
+        			<option value="Purchase Orders" selected>Purchase Orders</option>
+        			<option class="datatype-list-lts" value="Port of Loading">Port of Loading</option>
+        			<option class="datatype-list-lts">Port of Destination</option>
+        			<option class="datatype-list-lts">Distribution Centre</option>
+        			<option class="datatype-list-lts">Vendor</option>
+        			<option class="datatype-list-lts">Master Classification Database</option>
+        			<option class="datatype-list-lts">Buying Group</option>
+        			<option class="datatype-list-lts">Category</option>
+      			</select>
+      		</div>
+  		</div>
+      			<!-- <i class="fa fa-plus-circle"></i> -->
+      			<!-- <i class="fa fa-file"></i>
+      			<i class="fa fa-folder"></i> -->
+  		<hr>
+  		<div class="form-row">
+	  		<div class="form-group col">
+	    		<label for="upload-notes">Upload Notes</label>
+	    		<textarea class="form-control" id="upload-notes" name="upload-notes" rows="5"></textarea>
+	  		</div>
+  		</div>
+  		<div class="form-row">
+  			<div class="col">
+  				<button type="submit" class="btn btn-outline-success btn-lg">Upload</button>
+    		</div>
+  		</div>
+	</form>	
+</div>
+
+<script type="text/javascript" src="/javascript/upload.js"></script>
+<% include ./partials/footer %>

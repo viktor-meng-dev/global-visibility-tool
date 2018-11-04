@@ -1,0 +1,32 @@
+.registration-form, .upload-data-form {
+	color: white;
+	margin: 5% auto;
+	padding: 50px;
+	font-size: 1.2em;
+	border-radius: 25px;
+	width: 40%;
+}
+
+.form-row {
+	padding: 10px;
+}
+
+hr {
+	border-color: white;
+}
+
+.fa-plus-circle {
+	font-size: 2em;
+}
+
+.fa-plus-circle:hover {
+	font-size: 2em;
+	color: #18ad49;
+}
+
+.logged-out {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
+

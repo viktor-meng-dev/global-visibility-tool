@@ -1,0 +1,106 @@
+<% include ./partials/header %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/querydb.css">
+
+<div id="sql-table">
+	<ul class="nav nav-pills bg-dark">
+	  <li class="nav-item">
+	    <a class="nav-link active" href="/querydb/pol">Port of Loading</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="/querydb/pod">Port of Destination</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="/querydb/bg">Buying Group</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="/querydb/category">Category</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="/querydb/vendor">Vendor</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="/querydb/dc">Distribution Centre</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="/querydb/mcd">Master Classification Database</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="/querydb/purchase_orders">Purchase Orders</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="/querydb/phase2">Phase 2</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="/querydb/phase3">Phase 3</a>
+	  </li>
+	</ul>
+</div>
+
+<!-- <div id="sql-table">
+	<div class="btn-group btn-group-toggle btn-block" data-toggle="buttons">
+	  <label class="btn btn-secondary active" id="option1">
+	    <input type="radio" name="options" autocomplete="off" value="pol" checked> Port of Loading
+	  </label>
+	  <label class="btn btn-secondary">
+	    <input type="radio" name="options" autocomplete="off" value="pod"> Port of Destination
+	  </label>
+	  <label class="btn btn-secondary">
+	    <input type="radio" name="options" autocomplete="off" value="bg"> Buying Group
+	  </label>
+	  <label class="btn btn-secondary">
+	    <input type="radio" name="options" autocomplete="off" value="category"> Category
+	  </label>
+	  <label class="btn btn-secondary">
+	    <input type="radio" name="options" autocomplete="off" value="vendor"> Vendor
+	  </label>
+	  <label class="btn btn-secondary">
+	    <input type="radio" name="options" autocomplete="off" value="dc"> Distribution Centre
+	  </label>
+	  <label class="btn btn-secondary">
+	    <input type="radio" name="options" autocomplete="off" value="mcd"> Master Classification Database
+	  </label>
+	  <label class="btn btn-secondary">
+	    <input type="radio" name="options" autocomplete="off" value="purchase_orders"> Purchase Orders
+	  </label>
+	  <label class="btn btn-secondary">
+	    <input type="radio" name="options" autocomplete="off" value="phase2"> Phase 2
+	  </label>
+	  <label class="btn btn-secondary" id="optionN">
+	    <input type="radio" name="options" autocomplete="off" value="phase3"> Phase 3
+	  </label>
+	</div>
+</div> -->
+
+<div id="sql-output">
+
+	<table class="table table-striped table-bordered table-dark">
+	  <thead>
+	  	<tr>
+	  	<form id="filters">
+	  		<% fields.forEach(function(field) { %>
+	  		<th scope="col">
+				<input type="text" class="form-control" placeholder="<%= field %>">
+	  		</th>
+	  		<% }) %>
+	  	</form>
+	  	</tr>
+	  </thead>
+	  
+	  <tbody>
+	  	<% for (var i = 0; i < data.length; i++) { %>
+	  		<tr>
+	  			<% for (var j = 0; j < sqlFields.length; j++) { %>
+	  				<td><%= data[i][sqlFields[j]] %></td>
+	  			<% } %>
+	  		</tr>
+	  	<% } %>
+	  </tbody>
+	</table>
+	
+</div>	
+
+
+
+
+
+<% include ./partials/footer %>

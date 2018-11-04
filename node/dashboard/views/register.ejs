@@ -1,0 +1,60 @@
+<% include ./partials/header %> 
+<link rel="stylesheet" type="text/css" href="/stylesheets/register.css">
+
+<div class="container registration-form bg-dark">
+	<form method="POST" action="/register">
+		<div class="form-row">
+    		<div class="col">
+    			<label for="firstname">First Name</label>
+      			<input type="text" class="form-control" id="firstname" placeholder="e.g. Des" name="first_name" required>
+    		</div>
+    		<div class="col">
+    			<label for="lastname">Last Name</label>
+      			<input type="text" class="form-control" id="lastname" placeholder="e.g. Hiscock" name="last_name" required>
+    		</div>
+  		</div>
+ 
+  		<div class="form-row">
+  			<div class="col">
+  				<label for="email">Email Address</label>
+      			<input type="email" class="form-control" id="email" placeholder="e.g. des.hiscock@b-and-q.co.uk" name="email" required>
+      			<small id="email" class="form-text text-muted">This email address will be used for GVT reporting purposes only (if configured).</small>
+    		</div>
+  		</div>
+
+  		<div class="form-row">
+  			<div class="col">
+  				<label for="password">Password</label>
+      			<input type="password" class="form-control" id="password" name="password" required>
+    		</div>
+    		<div class="col">
+  				<label for="confirm-password">Confirm Password</label>
+      			<input type="password" class="form-control" id="confirm-password" required>
+    		</div>
+  		</div>
+
+  		<div class="form-row">
+  			<div class="col">
+  				<label for="job-title">Job Title</label>
+      			<input type="text" class="form-control" id="job-title" name="job_title" required>
+    		</div>
+    		<div class="col">
+    			<label for="business-sector">Business Sector</label>
+      			<select id="business-sector" class="form-control" name="business_sector" required>
+        			<option selected>Global Logistics</option>
+        			<option>Domestic Logistics</option>
+        			<option>Finance</option>
+      			</select>
+      		</div>
+  		</div>
+
+  		<div class="form-row">
+  			<div class="col">
+  				<button type="submit" class="btn btn-outline-primary btn-lg">Register</button>
+    		</div>
+  		</div>
+	</form>	
+</div>
+
+
+<% include ./partials/footer %>

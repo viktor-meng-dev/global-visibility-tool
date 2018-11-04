@@ -1,0 +1,9 @@
+python/**/__pycache__/
+python/**/dev/
+python/config.py
+python/**/testdata/
+sql/super_user.sql
+sql/**/corrections/
+node/dashboard/config.js
+user-uploads/
+node/**/node_modules/

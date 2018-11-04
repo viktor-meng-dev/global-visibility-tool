@@ -1,0 +1,42 @@
+#sql-output {
+	width: 80%;
+	margin: 0 auto 8em auto;
+	/*height: 50em;
+	overflow: auto;*/
+}
+
+#sql-output table td {
+	text-align: center; 
+    vertical-align: middle;
+    height: 50px;
+}
+
+#filters {
+	width: 50%;
+}
+
+#sql-table {
+	width: 80%;
+	margin: 5em auto 0 auto;
+}
+
+.nav {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+/*.btn-group.btn-block {
+    display: table;
+}
+.btn-group.btn-block > .btn {
+    display: table-cell;
+    border-radius: 0;
+}*/
+
+#option1 {
+	border-top-left-radius: 10px;
+}
+
+#optionN {
+	border-top-right-radius: 10px;
+}

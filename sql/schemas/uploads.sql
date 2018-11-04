@@ -1,0 +1,11 @@
+CREATE TABLE uploads (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	type TINYTEXT NOT NULL,
+	data TINYTEXT NOT NULL,
+	file_name TINYTEXT NOT NULL,
+	notes TEXT,
+	user_id INT,
+	uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	status VARCHAR(255) DEFAULT 'Pending',
+	FOREIGN KEY (user_id) REFERENCES users(id) 
+);

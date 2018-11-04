@@ -1,0 +1,35 @@
+<% include ./partials/header %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/log.css">
+
+<div id="log-table">
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">Uploaded By</th>
+	      <th scope="col">Upload Type</th>
+	      <th scope="col">Data Type</th>
+	      <th scope="col">Filename</th>
+	      <th scope="col">Uploaded At</th>
+	      <th scope="col">Status</th>
+	      <th scope="col">Comments</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<% upload_log.forEach(function(record) { %>
+	    <tr>
+	      <th scope="row"><%= record.first_name.concat(' ', record.last_name) %></th>
+	      <td><%= record.type %></td>
+	      <td><%= record.data %></td>
+	      <td><%= record.file_name %></td>
+	      <td><%= record.uploaded_at %></td>
+	      <td id="<%= 'log'.concat(record.id) %>"><%= record.status %></td>
+	      <td><%= record.notes %></td>
+	    </tr>
+	    <% }) %>
+	  </tbody>
+	</table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script type="text/javascript" src="/javascript/log.js"></script>
+<% include ./partials/footer %>
